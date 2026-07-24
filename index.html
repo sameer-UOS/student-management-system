@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+<header>
+    <div class="logo">🎓</div>
+
+        <h1>Students Management System</h1>
+        <p>Manage student records efficiently</p>
+</header>
+
+<main>
+    <!-- Student Form -->
+    <div class="form-section">
+        <label for="student-name">Name</label>
+        <input
+            type="text" 
+            id="student-name" 
+            placeholder="Enter student name"
+        >
+
+        <label for="student-age">Age</label>
+        <input 
+            type="number" 
+            id="student-age" 
+            placeholder="Enter age"
+        >
+        
+    <fieldset id="course">
+            <legend>Choose Course</legend>
+        <div class="radio-group">
+        <input 
+            type="radio" 
+            id="dit" 
+            name="course" 
+            value="Diploma Information Technology (DIT)" 
+            required
+        >
+        <label for="dit">Diploma Information Technology (DIT)</label>
+        </div>
+
+        <div class="radio-group">
+        <input 
+            type="radio" 
+            id="cit" 
+            name="course" 
+            value="Certificate Information Technology (CIT)" 
+            required
+        >
+        <label for="cit">Certificate Information Technology (CIT)</label>
+        </div>
+
+        <div class="radio-group">
+        <input 
+            type="radio" 
+            id="auto-cad" 
+            name="course" 
+            value="AutoCAD" 
+            required
+        >
+        <label for="auto-cad">AutoCAD</label>
+        </div>
+
+        <div class="radio-group">
+        <input 
+            type="radio" 
+            id="web-dev" 
+            name="course" 
+            value="Web Development" 
+            required
+        >
+        <label for="web-dev">Web Development</label>
+        </div>
+    </fieldset>
+
+    <button id="add-btn" class="button">
+        Add Student
+    </button>
+
+</div>
+    <!-- Search & Filter -->
+    <div class="tools-section">
+        <div class="search-box">
+    <label for="search">
+        Search Student
+    </label>
+    <input 
+        type="text" 
+        id="search" 
+        placeholder="Search by name"
+    >
+    </div>
+
+    <div class="filter-box">
+        <label for="filter-course">
+            Filter by Course
+    </label>
+    <select id="filter-course">
+        <option value="all">
+            All Courses
+        </option>
+
+        <option value="Diploma Information Technology (DIT)">
+            Diploma Information Technology (DIT)
+        </option>
+
+        <option value="Certificate Information Technology (CIT)">
+            Certificate Information Technology (CIT)
+        </option>
+
+        <option value="AutoCAD">
+            AutoCAD
+        </option>
+        <option value="Web Development">
+            Web Development
+        </option>
+    </select>
+    </div>
+
+    <p id="student-count"></p>
+</div>
+
+    <!-- Sort -->
+<div class="sort-buttons">
+    <button id="sort-name" class="button">
+        Sort A-Z
+    </button>
+    <button id="sort-name-desc" class="button">
+        Sort Z-A
+    </button>
+    <button id="sort-age-asc" class="button">
+        Age ↑
+    </button>
+    <button id="sort-age-desc" class="button">
+        Age ↓
+    </button>
+</div>
+
+    <!-- File Tools -->
+<div class="file-tools">
+    <button id="export-btn" class="button success-btn">
+        Export CSV
+    </button>
+
+    <div class="import-section">
+    <label for="import-file">
+        Import CSV
+    </label>
+    <input 
+        type="file" 
+        id="import-file" 
+        accept=".csv"
+    >
+    </div>
+</div>
+
+    <!-- Student List-->
+<section id="student-list">
+        <h2>Student List</h2>
+
+    <div 
+        id="student-details"
+        class="student-container">
+    </div>
+    </section>
+
+    <!-- Toast -->
+    <div id="toast"></div>
+
+    <!-- Delete Modal -->
+<div id="delete-modal" class="modal">
+
+    <div class="modal-content">
+
+        <h2>⚠ Delete Student</h2>
+
+        <p>Are you sure you want to delete this student?</p>
+
+        <div class="modal-actions">
+
+            <button type="button" id="cancel-btn">Cancel</button>
+
+            <button type="button" id="confirm-delete-btn">
+                Delete
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+</main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
