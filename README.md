@@ -18,7 +18,7 @@ Users can add, edit, delete, search, filter, and sort student records. The appli
 
 ### Search & Filter
 
-![Search & Filter](images/form.png)
+![Search & Filter](images/search_filter.png)
 
 ## ✨ Features
 
