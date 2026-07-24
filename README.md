@@ -6,6 +6,19 @@ The Student Management System is a frontend web application built using HTML, CS
 
 Users can add, edit, delete, search, filter, and sort student records. The application also supports CSV import/export and saves data in Local Storage, so records remain available even after refreshing the page.
 
+## 📸 Screenshots
+
+### Home Page
+
+![Home Page](images/home.png)
+
+### Student List
+
+![Student List](images/student-list.png)
+
+### Search & Filter
+
+![Search & Filter](images/form.png)
 
 ## ✨ Features
 
